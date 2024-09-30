@@ -13,7 +13,7 @@
  * Requires PHP: 7.4.33
  * Requires At Least: 5.9
  * Tested Up To: 6.6.2
- * Version: 3.4.1
+ * Version: 3.5.0
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -127,9 +127,9 @@ if ( ! class_exists( 'JsmForceSsl' ) ) {
 		public static function force_ssl_redirect() {
 
 			/*
-			 * Make sure web server variables exist in case WP is being used from the command line.
+			 * Make sure web server variables exist (and are not null) in case WP is being used from the command line.
 			 */
-			if ( isset( $_SERVER[ 'HTTP_HOST' ] ) && isset( $_SERVER[ 'REQUEST_URI' ] ) ) {
+			if ( ! empty( $_SERVER[ 'HTTP_HOST' ] ) && ! empty( $_SERVER[ 'REQUEST_URI' ] ) ) {
 
 				if ( ! self::is_https() ) {
 
