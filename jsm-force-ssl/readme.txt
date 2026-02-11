@@ -9,8 +9,8 @@ Assets URI: https://jsmoriss.github.io/jsm-force-ssl/assets/
 Tags: mixed content, insecure content, force ssl, redirect, seo
 Contributors: jsmoriss
 Requires PHP: 7.4.33
-Requires At Least: 5.9
-Tested Up To: 6.7.2
+Requires At Least: 6.0
+Tested Up To: 6.9
 Stable Tag: 3.5.0
 
 No setup required - simply activate to force HTTP URLs to HTTPS using native WordPress filters and permanent redirects for best SEO.
@@ -76,7 +76,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* Updated `JsmForceSsl::force_ssl_redirect()` to use not empty() instead of isset().
 * **Requires At Least**
 	* PHP v7.4.33.
-	* WordPress v5.9.
+	* WordPress v6.0.
 
 == Upgrade Notice ==
 
